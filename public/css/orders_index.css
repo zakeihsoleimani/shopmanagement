@@ -1,0 +1,132 @@
+
+/* صفحه فهرست سفارش‌ها */
+.order-page {
+    direction: rtl;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 24px;
+    color: #1e293b;
+    box-sizing: border-box;
+}
+
+.order-page .order-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 24px;
+    margin-top: 20px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+    overflow-x: auto;
+}
+
+.order-page .order-card h2 {
+    margin: 0 0 22px;
+    font-size: 22px;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.order-page table {
+    width: 100%;
+    min-width: 760px;
+    border-collapse: separate;
+    border-spacing: 0;
+    text-align: right;
+    font-size: 14px;
+}
+
+.order-page thead {
+    background: #f1f5f9;
+}
+
+.order-page th {
+    background: #f1f5f9;
+    color: #475569;
+    font-weight: 700;
+    padding: 16px;
+    white-space: nowrap;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.order-page th:first-child {
+    border-radius: 0 10px 0 0;
+}
+
+.order-page th:last-child {
+    border-radius: 10px 0 0 0;
+}
+
+.order-page td {
+    padding: 16px;
+    border-bottom: 1px solid #edf2f7;
+    color: #334155;
+    white-space: nowrap;
+}
+
+.order-page tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.order-page tbody tr:hover {
+    background: #f8fafc;
+}
+
+.order-page tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.order-page .status-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.order-page .status-pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.order-page .status-completed {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.order-page .status-cancelled {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.order-page .empty-orders {
+    text-align: center;
+    padding: 40px 20px;
+    color: #64748b;
+    background: #f8fafc;
+    border-radius: 12px;
+    line-height: 2;
+}
+
+@media (max-width: 768px) {
+    .order-page {
+        padding: 12px;
+    }
+
+    .order-page .order-card {
+        padding: 14px;
+        border-radius: 12px;
+    }
+
+    .order-page .order-card h2 {
+        font-size: 19px;
+    }
+
+    .order-page th,
+    .order-page td {
+        padding: 12px;
+        font-size: 13px;
+    }
+}
