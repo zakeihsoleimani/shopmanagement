@@ -68,7 +68,8 @@ Route::delete('/orders/{order}/items/{item}', [
     OrderController::class,
     'destroyItem',
 ])->name('orders.items.destroy');
-Route::get('/products/search', [
+//افزودن مشتری
+Route::post('/customers/quick-store', [
     OrderController::class,
-    'searchProducts',
-])->name('products.search');
+    'storeCustomer',
+])->name('customers.quick-store');

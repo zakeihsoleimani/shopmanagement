@@ -249,5 +249,32 @@ class OrderController extends Controller
                 ->get()
         );
     }
+    public function storeCustomer(Request $request)
+{
+    $validated = $request->validate([
+        'name' => ['required', 'string', 'max:255'],
+        'mobile' => [
+            'required',
+            'string',
+            'regex:/^09[0-9]{9}$/',
+            'unique:customers,mobile',
+        ],
+        'email' => ['nullable', 'email', 'max:255'],
+        'address' => ['nullable', 'string', 'max:2000'],
+    ]);
+
+    $customer = Customer::create($validated);
+
+    return response()->json([
+        'message' => 'مشتری با موفقیت ثبت شد.',
+        'customer' => [
+            'id' => $customer->id,
+            'name' => $customer->name,
+            'mobile' => $customer->mobile,
+            'email' => $customer->email,
+            'address' => $customer->address,
+        ],
+    ], 201);
+}
 
 }
